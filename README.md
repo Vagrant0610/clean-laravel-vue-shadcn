@@ -1,11 +1,14 @@
-# Laravel + Vue + Inertia + ShadcnUI
+# Laravel 12 + Vue + Inertia + Shadcn (UI)
 
-Build with docker:
+## First build project
+Build with docker environment:
 ```cmd
-composer install && \
-php artisan sail:install && \
-php artisan sail:publish
+composer setup-with-docker
 ```
+Build without docker:
 ```cmd
-./vendor/bin/sail npx shadcn-vue@latest add card
+composer setup
 ```
+
+## Add UI components
+

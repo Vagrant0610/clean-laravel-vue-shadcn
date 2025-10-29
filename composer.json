@@ -45,20 +45,15 @@
             "npm run build"
         ],
         "setup-with-docker": [
-            "echo \"Install dependency composer...\"",
             "composer install",
-            "echo \"Configure project...\"",
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "@php artisan key:generate",
-            "echo \"Install sail...\"",
             "@php artisan sail:install --with=mysql,mailpit,redis",
             "@php artisan sail:publish",
             "./vendor/bin/sail up -d",
             "sleep 3",
+            "./vendor/bin/sail artisan key:generate",
             "./vendor/bin/sail artisan migrate --force",
-            "echo \"Install dependency npm...\"",
             "./vendor/bin/sail npm install",
-            "echo \"Install base components...\"",
             "./vendor/bin/sail npx -y shadcn-vue@latest add card alert alert-dialog avatar badge button calendar card chart chart-bar dialog dropdown-menu form input input-group label pagination separator sheet sidebar skeleton table tabs textarea toggle tooltip",
             "./vendor/bin/sail npm run build"
         ],
