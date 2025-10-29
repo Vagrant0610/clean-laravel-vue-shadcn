@@ -1,6 +1,6 @@
 # Laravel 12 + Vue + Inertia + Shadcn/Vue (UI)
 
-This is a clean Laravel 12 project. The project is set for immediate development using the UI components of the [shadcn/vue](https://shadcn-vue.com/) package.
+This is a clean Laravel 12 project. The project is set for immediate development using the UI components of the [shadcn/vue](https://shadcn-vue.com/) package. The [ApexCharts](https://apexcharts.com/docs/installation/) graph component has also been added and configured.
 
 ## First build project
 Build with docker environment:
